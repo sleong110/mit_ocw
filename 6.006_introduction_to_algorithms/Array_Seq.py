@@ -7,7 +7,7 @@ class Array_Seq:
         return self.size                
 
     def __iter__(self):                     # O(1)
-        yield from self.A   
+        yield self.A   
     
     def build(self, X):                     # O(n)
         self.A = [a for a in X]             # pretend this builds a static array
@@ -42,7 +42,7 @@ class Array_Seq:
         x = self.A[i]
         self._copy_forward(i + 1, n - i - 1, A, i)
         self.build(A)
-        rturn x
+        return x
 
     def insert_first(self, x):              # O(n)
         self.insert_at(0, x)

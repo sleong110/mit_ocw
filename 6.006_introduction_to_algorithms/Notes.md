@@ -20,4 +20,19 @@ Dynamic     | insert_at(i, x)   | add x as the ith item
             | delete_first()    | remove andreturn the first item
             | insert_last(x)    | add x as the last item
             | delete_last()     | remove and return the last item
-            
+
+## Set Interface
+
+Container   | build(X)          | give an iterable X, build set from items in X
+            | len()             | return the number of stored items
+------------------------------------------------------------------------------------
+Static      | find(k)           | return the stored item with key k
+-------------------------------------------------------------------------------------
+Dynamic     | insert(x)         | add x to set (replace item with key x.key if one already exists)
+            | delete(k)         | remove and return the stored item with key k
+-------------------------------------------------------------------------------------
+Order       | iter_ord()        | return the stored items one-by-one in key order
+            | find_min()        | return the stored item with smallest key
+            | find_max()        | return the stored item with largest key
+            | find_next(k)      | return the stored item with smallest key larger than k
+            | find_prev(k)      | return the stored item with largest key smaller than k
